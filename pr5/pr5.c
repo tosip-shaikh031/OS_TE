@@ -6,7 +6,6 @@
 
 
 #include <stdio.h>
-
 #define N 5   // number of processes
 #define M 3   // number of resources
 

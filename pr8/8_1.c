@@ -53,8 +53,10 @@ int cscan(int requests[], int n, int head) {
     }
 
     // jump from 499 to 0 (circular move)
-    total_movement += (DISK_SIZE - 1 - head); // move to 499
+    printf(" -> %d", DISK_SIZE - 1);
+    total_movement += (DISK_SIZE - 1 - head); // move to 499 from current head
     total_movement += (DISK_SIZE - 1);        // jump 499→0
+    printf(" -> %d", 0);
 
     head = 0;
 

@@ -73,12 +73,12 @@ void* writer(void* arg) {
 int main() {
     srand(time(NULL));
 
-    pthread_t readers[3], writers[2];
+    pthread_t readers[3], writers[2]; // 3 readers and 2 writers
     int r_id[3] = {1, 2, 3};
     int w_id[2] = {1, 2};
 
     // Initialize synchronization primitives
-    sem_init(&db, 0, 1);
+    sem_init(&db, 0, 1); // binary semaphore for database access
     pthread_mutex_init(&mutex, NULL);
 
     // Create threads
