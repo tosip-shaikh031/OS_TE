@@ -27,6 +27,7 @@ void sort(int arr[], int n) {
 }
 
 // SCAN Disk Scheduling
+// Motion : from current head to 499, then reverse to 0
 void scan(int req[], int n, int head) {
     int total = 0;
     sort(req, n);
@@ -61,6 +62,7 @@ void scan(int req[], int n, int head) {
 }
 
 // LOOK Disk Scheduling
+// Motion : from current head to highest request, then reverse to lowest request
 void look(int req[], int n, int head) {
     int total = 0;
     sort(req, n);
@@ -105,3 +107,6 @@ int main() {
 
     return 0;
 }
+
+// Out of look scan cscan clook arrange with efficiency
+// order with total movement : 

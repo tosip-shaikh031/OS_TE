@@ -29,6 +29,7 @@ void sort(int arr[], int n) {
 }
 
 // Function for C-SCAN scheduling
+// Motion : from current head to end (499), jump to start (0), then to remaining requests
 int cscan(int requests[], int n, int head) {
     int total_movement = 0;
     int i, pos;
@@ -74,6 +75,7 @@ int cscan(int requests[], int n, int head) {
 }
 
 // Function for C-LOOK scheduling
+// Motion : from current head to highest request, jump to lowest request, then to remaining requests
 int clook(int requests[], int n, int head) {
     int total_movement = 0;
     int i, pos;
